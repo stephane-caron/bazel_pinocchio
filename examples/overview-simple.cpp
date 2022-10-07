@@ -1,5 +1,8 @@
 /*
  * Copyright (c) 2016-2022 CNRS INRIA
+ * Source:
+ * https://github.com/stack-of-tasks/pinocchio/blob/2a4953eca3886d7cfcc3037c6944fe2b892d70fb/examples/overview-simple.cpp
+ * License: BSD-2-Clause
  */
 
 #include "pinocchio/algorithm/joint-configuration.hpp"
