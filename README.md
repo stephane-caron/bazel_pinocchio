@@ -22,9 +22,7 @@ load("@bazel_pinocchio//tools/workspace:default.bzl", add_bazel_pinocchio = "add
 add_bazel_pinocchio()
 ```
 
-## Example
-
-You can build C++ targets that depend on Pinocchio as follows:
+You can then build C++ targets that depend on ``@pinocchio``:
 
 ```python
 cc_binary(
@@ -34,10 +32,12 @@ cc_binary(
 )
 ```
 
-From this repository, run this example by:
+## Example
+
+From this repository, run:
 
 ```console
 $ bazel run //examples:overview-simple
 ```
 
-It should output ``tau = 0 0 0 0 0 0``.
+This example should output ``tau = 0 0 0 0 0 0``.
