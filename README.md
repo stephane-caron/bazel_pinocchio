@@ -2,9 +2,9 @@
 
 Rules for building C++ projects with ``@pinocchio`` as a dependency.
 
-## Installation
+## Setup
 
-Add the following to your WORKSPACE file:
+Add the following to your ``WORKSPACE`` file:
 
 ```python
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
@@ -24,10 +24,20 @@ add_bazel_pinocchio()
 
 ## Example
 
-From this repository, run:
+You can build C++ targets that depend on Pinocchio as follows:
+
+```python
+cc_binary(
+    name = "overview-simple",
+    srcs = ["overview-simple.cpp"],
+    deps = ["@pinocchio"],
+)
+```
+
+From this repository, run this example by:
 
 ```console
 $ bazel run //examples:overview-simple
 ```
 
-This example should output ``tau = 0 0 0 0 0 0``.
+It should output ``tau = 0 0 0 0 0 0``.

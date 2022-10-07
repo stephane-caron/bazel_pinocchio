@@ -6,10 +6,6 @@ package(default_visibility = ["//visibility:public"])
 
 cc_binary(
     name = "overview-simple",
-    srcs = [
-        "overview-simple.cpp",
-    ],
-    deps = [
-        "@pinocchio",
-    ],
+    srcs = ["overview-simple.cpp"],
+    deps = ["@pinocchio"],
 )
