@@ -6,7 +6,7 @@ Rules for building C++ projects with ``@pinocchio`` as a dependency.
 
 Add the following to your WORKSPACE file:
 
-```
+```python
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
 http_archive(
