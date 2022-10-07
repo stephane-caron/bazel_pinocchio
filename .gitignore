@@ -1,0 +1,4 @@
+bazel-bazel_pinocchio
+bazel-bin
+bazel-out
+bazel-testlogs
