@@ -1,2 +1,8 @@
-# bazel_pinocchio
-Bazel repository rules to build Pinocchio targets
+# Bazel rules for Pinocchio
+
+Bazel repository rules to build Pinocchio targets.
+
+## Installation
+
+## Example
+
