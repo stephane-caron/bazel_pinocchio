@@ -3,6 +3,7 @@
 # Copyright 2022 Stéphane Caron
 
 load("//tools/workspace/eigen:repository.bzl", "eigen_repository")
+load("//tools/workspace/pinocchio:repository.bzl", "pinocchio_repository")
 load("//tools/workspace/rules_foreign_cc:repository.bzl", "rules_foreign_cc_repository")
 
 def add_default_repositories():
@@ -11,4 +12,5 @@ def add_default_repositories():
     be loaded and called from a WORKSPACE file.
     """
     eigen_repository()
+    pinocchio_repository()
     rules_foreign_cc_repository()
