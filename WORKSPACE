@@ -13,9 +13,12 @@ rules_foreign_cc_dependencies()
 # Python
 # ======
 
-load("@rules_python//python:pip.bzl", "pip_install")
+load("@rules_python//python:pip.bzl", "pip_parse")
 
-pip_install(
+pip_parse(
     name = "pip_bazel_pinocchio",
-    requirements = "//tools/workspace/pip_bazel_pinocchio:requirements.txt",
+    requirements_lock = "//tools/workspace/pip_bazel_pinocchio:requirements_lock.txt",
 )
+
+load("@pip_bazel_pinocchio//:requirements.bzl", "install_deps")
+install_deps()
