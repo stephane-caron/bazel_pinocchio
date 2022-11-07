@@ -37,7 +37,7 @@ cc_binary(
 From this repository, run:
 
 ```console
-$ bazel run //examples:overview-simple
+$ bazel run //examples/cpp:overview-simple
 ```
 
 This example should output ``tau = 0 0 0 0 0 0``.
