@@ -5,7 +5,7 @@ load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 def rules_python_repository():
     http_archive(
         name = "rules_python",
-        sha256 = "8c8fe44ef0a9afc256d1e75ad5f448bb59b81aba149b8958f02f7b3a98f5d9b4",
-        strip_prefix = "rules_python-0.13.0",
-        url = "https://github.com/bazelbuild/rules_python/archive/refs/tags/0.13.0.tar.gz",
+        sha256 = "cdf6b84084aad8f10bf20b46b77cb48d83c319ebe6458a18e9d2cebf57807cdd",
+        strip_prefix = "rules_python-0.8.1",
+        url = "https://github.com/bazelbuild/rules_python/archive/refs/tags/0.8.1.tar.gz",
     )
