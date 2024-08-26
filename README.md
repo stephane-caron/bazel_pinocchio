@@ -2,13 +2,15 @@
 
 Rules for building C++ targets that depend on [Pinocchio](https://github.com/stack-of-tasks/pinocchio).
 
-## Setup
+## Build dependencies
 
-Pick the [release version](https://github.com/stephane-caron/bazel_pinocchio/releases) that corresponds to the Pinocchio version you want to use: in what follows, we will assume version 2.7.0. Next, make sure you have installed the build dependencies of Pinocchio for your OS, for instance for Ubuntu:
+You will need the build dependencies of Pinocchio for your operating system, for instance on Ubuntu 22.04:
 
 ```console
 sudo apt install libboost-filesystem-dev libboost-serialization-dev libboost-system-dev libeigen3-dev liburdfdom-dev
 ```
+
+## Setup
 
 Add the following to your ``WORKSPACE`` file:
 
@@ -17,9 +19,9 @@ load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
 http_archive(
     name = "bazel_pinocchio",
-    url = "https://github.com/stephane-caron/bazel_pinocchio/archive/refs/tags/v2.7.0.tar.gz",
-    sha256 = "83eb99d021e5f5844bb377ac556713d1006ae4039216cc1e71f14ae3cfad5bae",
-    strip_prefix = "bazel_pinocchio-2.7.0",
+    url = "https://github.com/stephane-caron/bazel_pinocchio/archive/refs/tags/v3.0.0.tar.gz",
+    sha256 = "0e49f3d92e303fe109bc8b329513708a03cdb734a90cb7734821ed2978de8d10",
+    strip_prefix = "bazel_pinocchio-3.0.0",
 )
 
 load("@bazel_pinocchio//tools/workspace:default.bzl", add_bazel_pinocchio = "add_default_repositories")
