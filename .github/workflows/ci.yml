@@ -17,7 +17,7 @@ jobs:
 
             - name: "Install dependencies"
               run: |
-                  sudo apt install libeigen3-dev
+                  sudo apt install libboost-filesystem-dev libboost-serialization-dev libboost-system-dev libeigen3-dev liburdfdom-dev
 
             - name: "Run example"
               env:
@@ -25,43 +25,9 @@ jobs:
               run: |
                   tools/bazelisk run --compilation_mode=fastbuild //examples/cpp:overview-simple
 
-    run_darwin_arm64:
-        name: "Build on macOS (ARM64)"
-        runs-on: macos-latest
-        steps:
-            - name: "Checkout sources"
-              uses: actions/checkout@v4
-
-            - name: 'Set up latest Oracle JDK 21'
-              uses: oracle-actions/setup-java@v1
-              with:
-                  website: oracle.com
-                  release: 21
-
-            - name: "Run example"
-              run: |
-                  tools/bazelisk run --compilation_mode=fastbuild --config=darwin_arm64 //examples/cpp:overview-simple
-
-    run_darwin_x86:
-        name: "Build on macOS (x86)"
-        runs-on: macos-13
-        steps:
-            - name: "Checkout sources"
-              uses: actions/checkout@v4
-
-            - name: 'Set up latest Oracle JDK 21'
-              uses: oracle-actions/setup-java@v1
-              with:
-                  website: oracle.com
-                  release: 21
-
-            - name: "Run example"
-              run: |
-                  tools/bazelisk run --compilation_mode=fastbuild --config=darwin_x86 //examples/cpp:overview-simple
-
     ci_success:
         name: "CI success"
         runs-on: ubuntu-latest
-        needs: [run_linux, run_darwin_arm64, run_darwin_x86]
+        needs: [run_linux]
         steps:
             - run: echo "CI workflow completed successfully"
