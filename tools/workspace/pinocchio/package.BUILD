@@ -25,6 +25,6 @@ cmake(
     ],
     out_include_dir = "include",
     out_shared_libs = [
-        "libpinocchio.so.2.6.10",
+        "libpinocchio.so.2.7.0",
     ],
 )
