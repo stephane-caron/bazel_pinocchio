@@ -2,9 +2,9 @@
 
 Rules for building C++ targets that depend on [Pinocchio](https://github.com/stack-of-tasks/pinocchio).
 
-## Build dependencies
+## Prerequisites
 
-You will need the build dependencies of Pinocchio for your operating system, for instance on Ubuntu 22.04:
+You will need the build dependencies of Pinocchio for your operating system. For instance, on Ubuntu 22.04:
 
 ```console
 sudo apt install libboost-filesystem-dev libboost-serialization-dev libboost-system-dev libeigen3-dev liburdfdom-dev
