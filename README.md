@@ -1,6 +1,6 @@
 # Bazel rules for Pinocchio
 
-Rules for building C++ targets that depend on [Pinocchio](https://github.com/stack-of-tasks/pinocchio).
+Workspace rules for building C++ targets that depend on [Pinocchio](https://github.com/stack-of-tasks/pinocchio).
 
 ## Prerequisites
 

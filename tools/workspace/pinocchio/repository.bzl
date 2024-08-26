@@ -4,7 +4,7 @@ load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
 def pinocchio_repository(
         version = "3.1.0",
-        sha256 = "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"):
+        sha256 = "e624484077eee3183e20443ab0373205bb832a2597241531705116fa9f07016a"):
     """
     Clone repository from GitHub and make its targets available for binding.
 
