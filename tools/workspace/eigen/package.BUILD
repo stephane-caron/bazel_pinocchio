@@ -14,6 +14,6 @@ cc_library(
     ]),
     includes = ["."],
     defines = [
-        "EIGEN_MPL2_ONLY",
+        # "EIGEN_MPL2_ONLY",  # disabled because of the SparseCholesky module
     ],
 )
