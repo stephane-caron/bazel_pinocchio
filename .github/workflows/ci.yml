@@ -21,7 +21,7 @@ jobs:
               run: |
                   tools/bazelisk run --compilation_mode=fastbuild //examples/cpp:overview-simple
 
-    build_darwin_arm64:
+    run_darwin_arm64:
         name: "Build on macOS (ARM64)"
         runs-on: macos-latest
         steps:
@@ -38,7 +38,7 @@ jobs:
               run: |
                   tools/bazelisk run --compilation_mode=fastbuild --config=darwin_arm64 //examples/cpp:overview-simple
 
-    build_darwin_x86:
+    run_darwin_x86:
         name: "Build on macOS (x86)"
         runs-on: macos-13
         steps:
