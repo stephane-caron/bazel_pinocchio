@@ -41,6 +41,6 @@ cmake(
     ],
     out_include_dir = "include",
     out_shared_libs = [
-        "libpinocchio.so.3.0.0",
+        "libpinocchio_default.so.3.0.0",
     ],
 )
