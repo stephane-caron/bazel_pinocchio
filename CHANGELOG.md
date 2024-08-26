@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.1.0] - 2024-08-26
+
+### Changed
+
+- Update to Pinocchio 3.1.0
+
 ## [3.0.0] - 2024-08-26
 
 ### Added
@@ -36,7 +42,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Starting this changelog.
 
-[unreleased]: https://github.com/upkie/upkie/compare/v2.7.0...HEAD
+[unreleased]: https://github.com/upkie/upkie/compare/v3.1.0...HEAD
+[3.1.0]: https://github.com/upkie/upkie/compare/v3.0.0...v3.1.0
+[3.0.0]: https://github.com/upkie/upkie/compare/v2.7.0...v3.0.0
 [2.7.0]: https://github.com/upkie/upkie/compare/v2.6.10...v2.7.0
 [2.6.10]: https://github.com/upkie/upkie/compare/v0.1.0...v2.6.10
 [0.1.0]: https://github.com/upkie/upkie/releases/tag/v0.1.0
