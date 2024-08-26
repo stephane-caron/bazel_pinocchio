@@ -1,0 +1,63 @@
+name: CI
+
+on:
+    push:
+        branches: [ main ]
+    pull_request:
+        branches: [ main ]
+
+jobs:
+    run_linux:
+        name: "Run example on Linux"
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: "Checkout sources"
+              uses: actions/checkout@v4
+
+            - name: "Run example"
+              env:
+                  BAZELISK_GITHUB_TOKEN: ${{ secrets.BAZELISK_GITHUB_TOKEN }}
+              run: |
+                  tools/bazelisk run --compilation_mode=fastbuild //examples/cpp:overview-simple
+
+    build_darwin_arm64:
+        name: "Build on macOS (ARM64)"
+        runs-on: macos-latest
+        steps:
+            - name: "Checkout sources"
+              uses: actions/checkout@v4
+
+            - name: 'Set up latest Oracle JDK 21'
+              uses: oracle-actions/setup-java@v1
+              with:
+                  website: oracle.com
+                  release: 21
+
+            - name: "Run example"
+              run: |
+                  tools/bazelisk run --compilation_mode=fastbuild --config=darwin_arm64 //examples/cpp:overview-simple
+
+    build_darwin_x86:
+        name: "Build on macOS (x86)"
+        runs-on: macos-13
+        steps:
+            - name: "Checkout sources"
+              uses: actions/checkout@v4
+
+            - name: 'Set up latest Oracle JDK 21'
+              uses: oracle-actions/setup-java@v1
+              with:
+                  website: oracle.com
+                  release: 21
+
+            - name: "Run example"
+              run: |
+                  tools/bazelisk run --compilation_mode=fastbuild --config=darwin_x86 //examples/cpp:overview-simple
+
+    ci_success:
+        name: "CI success"
+        runs-on: ubuntu-latest
+        needs: [run_linux, run_darwin_arm64, run_darwin_x86]
+        steps:
+            - run: echo "CI workflow completed successfully"

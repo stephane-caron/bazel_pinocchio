@@ -7,11 +7,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- CI workflow for Linux
+- CI workflow for ARM64 macOS
+- CI workflow for x86 macOS
+
 ## [2.7.0] - 2024-08-26
+
+### Changed
 
 - Updated to Pinocchio v2.7.0
 
 ## [2.6.10] - 2024-08-26
+
+### Changed
 
 - Tag for Pinocchio v.2.6.10
 
