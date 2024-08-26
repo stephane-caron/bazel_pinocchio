@@ -4,7 +4,11 @@ Rules for building C++ targets that depend on [Pinocchio](https://github.com/sta
 
 ## Setup
 
-Pick the [release version](https://github.com/stephane-caron/bazel_pinocchio/releases) that corresponds to the Pinocchio version you want to use. In what follows we assume v2.7.0.
+Pick the [release version](https://github.com/stephane-caron/bazel_pinocchio/releases) that corresponds to the Pinocchio version you want to use: in what follows, we will assume version 2.7.0. Next, make sure you have installed the build dependencies of Pinocchio for your OS, for instance for Ubuntu:
+
+```console
+sudo apt install libboost-filesystem-dev libboost-serialization-dev libboost-system-dev libeigen3-dev liburdfdom-dev
+```
 
 Add the following to your ``WORKSPACE`` file:
 
