@@ -3,8 +3,8 @@
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
 def pinocchio_repository(
-        version = "3.1.0",
-        sha256 = "e624484077eee3183e20443ab0373205bb832a2597241531705116fa9f07016a"):
+        version = "3.2.0",
+        sha256 = "b6a7e6f6f6e3f175dd7010aa998a018f88d712477caa6c41f6ae038310c2fd7d"):
     """
     Download release archive from GitHub.
 
