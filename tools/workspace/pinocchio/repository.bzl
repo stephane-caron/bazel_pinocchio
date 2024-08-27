@@ -6,10 +6,10 @@ def pinocchio_repository(
         version = "3.1.0",
         sha256 = "e624484077eee3183e20443ab0373205bb832a2597241531705116fa9f07016a"):
     """
-    Clone repository from GitHub and make its targets available for binding.
+    Download release archive from GitHub.
 
     Args:
-        version: version of the library to get.
+        version: Version of the library to download.
         sha256: SHA-256 checksum of the downloaded archive.
     """
     http_archive(
