@@ -5,6 +5,8 @@
  * License: BSD-2-Clause
  */
 
+#include <iostream>
+
 #include "pinocchio/algorithm/joint-configuration.hpp"
 #include "pinocchio/algorithm/rnea.hpp"
 #include "pinocchio/parsers/sample-models.hpp"
