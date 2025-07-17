@@ -20,7 +20,7 @@ load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 http_archive(
     name = "bazel_pinocchio",
     url = "https://github.com/stephane-caron/bazel_pinocchio/archive/refs/tags/v3.5.0.tar.gz",
-    sha256 = "...",
+    sha256 = "e1602d8f2e09d99485c1d022f7e8e24f4daf31fc4489eee8932fa0c6f7ee6a5a",
     strip_prefix = "bazel_pinocchio-3.5.0",
 )
 
