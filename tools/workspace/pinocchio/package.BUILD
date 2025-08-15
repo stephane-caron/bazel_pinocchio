@@ -14,6 +14,7 @@ filegroup(
 cmake(
     name = "pinocchio",
     lib_source = ":srcs",
+    build_args = ["-j4"],  # adapt to your CPU
     cache_entries = {
         "BUILD_ADVANCED_TESTING": "OFF",
         "BUILD_BENCHMARK": "OFF",

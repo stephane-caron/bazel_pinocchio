@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- Build with four parallel processes by default
 - Update Eigen dependency rule to pkg-config rather than http archive
 
 ## [3.5.0] - 2025-07-17
