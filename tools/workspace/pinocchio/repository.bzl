@@ -3,8 +3,8 @@
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
 def pinocchio_repository(
-        version = "3.5.0",
-        sha256 = "5a1d521c5f885768075016455d3f9eb50bfb258db540c2f2c681ad251e25736c"):
+        version = "3.6.0",
+        sha256 = "3008e313e3d3321fa0a74d1c35a667c368953def040d74ca5a9b98f43ea50342"):
     """
     Download release archive from GitHub.
 
@@ -20,4 +20,8 @@ def pinocchio_repository(
         sha256 = sha256,
         strip_prefix = "pinocchio-{}".format(version),
         build_file = Label("//tools/workspace/pinocchio:package.BUILD"),
+        patch_cmds = [
+            "find . -name '_unittests' -type l -exec rm -rf {} + || true",
+            "find . -path '*/cmake/_unittests' -exec rm -rf {} + || true",
+        ],
     )
