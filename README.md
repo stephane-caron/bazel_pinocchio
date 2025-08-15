@@ -40,6 +40,8 @@ cc_binary(
 )
 ```
 
+Check out the [`pinocchio/package.BUILD`](tools/workspace/pinocchio/package.BUILD) for feature toggles and build-time arguments.
+
 ## Example
 
 From this repository, run:
