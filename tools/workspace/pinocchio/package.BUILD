@@ -30,11 +30,11 @@ cmake(
         "BUILD_WITH_EXTRA_SUPPORT": "OFF",
         "BUILD_WITH_OPENMP_SUPPORT": "OFF",
         "BUILD_WITH_SDF_SUPPORT": "OFF",
-        "BUILD_WITH_URDF_SUPPORT": "ON",  # this one is ON
+        "BUILD_WITH_URDF_SUPPORT": "ON",  # defaults to ON in Pinocchio
         "CMAKE_BUILD_TYPE": "Release",
         "CMAKE_INSTALL_LIBDIR": "lib",
         "ENABLE_COVERAGE": "OFF",
-        "ENABLE_TEMPLATE_INSTANTIATION": "ON",  # this one is ON
+        "ENABLE_TEMPLATE_INSTANTIATION": "ON",  # defaults to ON in Pinocchio
         "GENERATE_PYTHON_STUBS": "OFF",
         "INSTALL_DOCUMENTATION": "OFF",
     },
