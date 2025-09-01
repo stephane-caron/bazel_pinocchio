@@ -12,25 +12,9 @@ sudo apt install libboost-filesystem-dev libboost-serialization-dev libboost-sys
 
 ## Setup
 
-Add the following to your ``WORKSPACE`` file:
+Add to your `WORKSPACE` file the `http_archive` instruction from the [release page](https://github.com/stephane-caron/bazel_pinocchio/releases/tag/v3.6.0).
 
-```python
-load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
-
-http_archive(
-    name = "bazel_pinocchio",
-    url = "https://github.com/stephane-caron/bazel_pinocchio/archive/refs/tags/v3.5.0.tar.gz",
-    sha256 = "e1602d8f2e09d99485c1d022f7e8e24f4daf31fc4489eee8932fa0c6f7ee6a5a",
-    strip_prefix = "bazel_pinocchio-3.5.0",
-)
-
-load("@bazel_pinocchio//tools/workspace:default.bzl", add_bazel_pinocchio = "add_default_repositories")
-
-# This creates the @eigen and @pinocchio dependencies
-add_bazel_pinocchio()
-```
-
-You can then build C++ targets that depend on ``@pinocchio``:
+You will then be able to build C++ targets that depend on ``@pinocchio``:
 
 ```python
 cc_binary(
@@ -40,7 +24,7 @@ cc_binary(
 )
 ```
 
-Check out the [`pinocchio/package.BUILD`](tools/workspace/pinocchio/package.BUILD) for feature toggles and build-time arguments.
+Check out [`pinocchio/package.BUILD`](tools/workspace/pinocchio/package.BUILD) for feature toggles and build-time arguments.
 
 ## Example
 
