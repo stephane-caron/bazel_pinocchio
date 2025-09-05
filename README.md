@@ -14,7 +14,7 @@ sudo apt install libboost-filesystem-dev libboost-serialization-dev libboost-sys
 
 Add to your `WORKSPACE` file the `http_archive` instruction from the [release page](https://github.com/stephane-caron/bazel_pinocchio/releases/tag/v3.6.0).
 
-You will then be able to build C++ targets that depend on ``@pinocchio``:
+You can then define C++ targets that depend on ``@pinocchio``:
 
 ```python
 cc_binary(
